@@ -1,6 +1,5 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-
 // importamos los componentes que deseamos tengan su propia página
 import PrincipalPage from '@/components/PrincipalPage.vue';
 import Login from '@/components/Login.vue';
