@@ -19,7 +19,7 @@
                     <h2>Desconocido</h2>
                     <p class="title">CEO & Founder</p>
                     <p>Just a ghost</p>
-                    <p>ninja@tecla.com</p>
+                    <p>ninja@{{ $route.params.nombre }}.com</p>
                     <p><button class="button">Contact</button></p>
                 </div>
             </div>
@@ -32,7 +32,7 @@
                     <h2>Groot</h2>
                     <p class="title">Art Director</p>
                     <p>I am groot ... I AM GROOT.</p>
-                    <p>Groot@tecla.com</p>
+                    <p>Groot@{{ $route.params.nombre }}.com</p>
                     <p><button class="button">Contact</button></p>
                 </div>
             </div>
