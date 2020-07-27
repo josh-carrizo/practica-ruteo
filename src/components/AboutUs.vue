@@ -1,9 +1,8 @@
 <template >
     <div>
 
-    <h1>About {{ $route.params.nombre }}</h1>
-    <router-link class="link-inicio" v-bind:to="{ path: `/` }">Home</router-link>
-
+    <h1>About {{ $route.params.restoran }}</h1>
+  
     <div class="about-section">
         <h1>Sobre nosotros</h1>
         <p>Enjoy the principal gift!</p>
@@ -19,7 +18,7 @@
                     <h2>Desconocido</h2>
                     <p class="title">CEO & Founder</p>
                     <p>Just a ghost</p>
-                    <p>ninja@{{ $route.params.nombre }}.com</p>
+                    <p>ninja@{{ $route.params.restoran }}.com</p>
                     <p><button class="button">Contact</button></p>
                 </div>
             </div>
@@ -32,7 +31,7 @@
                     <h2>Groot</h2>
                     <p class="title">Art Director</p>
                     <p>I am groot ... I AM GROOT.</p>
-                    <p>Groot@{{ $route.params.nombre }}.com</p>
+                    <p>Groot@{{ $route.params.restoran }}.com</p>
                     <p><button class="button">Contact</button></p>
                 </div>
             </div>
@@ -50,11 +49,6 @@ export default {
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
-}
-.link-inicio{
-    position: absolute;
-    top: 2rem;
-    right:10rem;
 }
 html {
   box-sizing: border-box;

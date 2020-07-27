@@ -2,15 +2,6 @@
     <div>
 
         <h1>Reviews of {{ $route.params.restoran }}</h1>
-        <router-link class="link-inicio" v-bind:to="{ path: `/` }">Home</router-link>
-
-            <h2 style="text-align:center"> 
-                <router-link v-bind:to="{ path: `/${Reviews}/reviews` }">Reviews</router-link>
-                <span> | </span>
-                <router-link v-bind:to="{ path: `/${Images}/images` }">Imagenes</router-link>
-                <span> | </span>
-                <router-link v-bind:to="{ path: `/${AboutUs}` }">About Us</router-link>
-            </h2>
 
         <div class="row">
             <div class="column ">

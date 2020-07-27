@@ -32,12 +32,15 @@ export default new VueRouter({
       path: '/:restoran',
       component:Restoran,
       children:[
-        {path:'/',
-        component: AboutUs},
-        {path:'/reviews',
-        component: Reviews},
-        {path:'/images',
-        component: Images}
+        {path:'',
+        component: AboutUs
+        },
+        {path:'reviews',
+        component: Reviews
+        },
+        {path:'images',
+        component: Images
+        }
       ]
     },
     {

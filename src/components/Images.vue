@@ -1,17 +1,7 @@
 <template >
     <div>
 
-        <h1> {{ $route.params.restoran }}</h1>
-        <router-link class="link-inicio" v-bind:to="{ path: `/` }">Home</router-link>
-            <h2 style="text-align:center"> 
-                <router-link v-bind:to="{ path: `/${Reviews}/reviews` }">Reviews</router-link>
-                <span> | </span>
-                <router-link v-bind:to="{ path: `/${Images}/images` }">Imagenes</router-link>
-                <span> | </span>
-                <router-link v-bind:to="{ path: `/${AboutUs}` }">About Us</router-link>
-            </h2>
-
-            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                 <img class="d-block w-100" src="https://bestanimations.com/Food/food-animated-gif-6.gif" alt="First slide">
@@ -31,7 +21,7 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </a>
-            </div>
+        </div>
     </div>
 </template>
 <script>
