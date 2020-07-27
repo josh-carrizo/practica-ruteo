@@ -21,7 +21,7 @@
                 </p>
                 <button>Read more</button>
             </li>
-    	</ul>
+		</ul>
 </div>
 </template>
 <script>

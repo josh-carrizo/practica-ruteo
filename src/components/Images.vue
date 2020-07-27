@@ -2,6 +2,14 @@
     <div>
 
         <h1> {{ $route.params.restoran }}</h1>
+        <router-link class="link-inicio" v-bind:to="{ path: `/` }">Home</router-link>
+            <h2 style="text-align:center"> 
+                <router-link v-bind:to="{ path: `/${Reviews}/reviews` }">Reviews</router-link>
+                <span> | </span>
+                <router-link v-bind:to="{ path: `/${Images}/images` }">Imagenes</router-link>
+                <span> | </span>
+                <router-link v-bind:to="{ path: `/${AboutUs}` }">About Us</router-link>
+            </h2>
 
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
@@ -36,7 +44,11 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
 }
-
+.link-inicio{
+    position: absolute;
+    top: 2rem;
+    right:10rem;
+}
 html {
   box-sizing: border-box;
 }

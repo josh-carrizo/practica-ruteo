@@ -8,6 +8,8 @@ import AboutUs from '@/components/AboutUs.vue';
 import NotFound from '@/components/NotFound.vue';
 import Reviews from '@/components/Reviews.vue';
 import Images from '@/components/Images.vue';
+import Restoran from '@/components/Restoran.vue';
+
 
 Vue.use(VueRouter);    // instalamos explícitamente el router
 
@@ -23,21 +25,21 @@ export default new VueRouter({
     },
     {
       path: '/category/:restoran', 
-      component: Categories
+      component: Categories,
+    
     },
     {
-      path: '/:nombre', 
-      component: AboutUs
+      path: '/:restoran',
+      component:Restoran,
+      children:[
+        {path:'/',
+        component: AboutUs},
+        {path:'/reviews',
+        component: Reviews},
+        {path:'/images',
+        component: Images}
+      ]
     },
-    {
-      path: '/:restoran/reviews',
-      component: Reviews
-    },
-    {
-      path: '/:restoran/images',
-      component: Images
-    },
-
     {
         path: '*', 
         component: NotFound

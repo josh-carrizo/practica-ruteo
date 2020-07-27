@@ -2,6 +2,7 @@
     <div>
 
     <h1>About {{ $route.params.nombre }}</h1>
+    <router-link class="link-inicio" v-bind:to="{ path: `/` }">Home</router-link>
 
     <div class="about-section">
         <h1>Sobre nosotros</h1>
@@ -9,7 +10,6 @@
         <p>I just have a cool gif, but isn't mine</p>
     </div>
 
-    <h2 style="text-align:center">Workers of {{ $route.params.nombre }}</h2>
 
     <div class="row">
         <div class="column">
@@ -51,7 +51,11 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
 }
-
+.link-inicio{
+    position: absolute;
+    top: 2rem;
+    right:10rem;
+}
 html {
   box-sizing: border-box;
 }
