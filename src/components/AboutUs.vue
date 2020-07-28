@@ -1,7 +1,7 @@
 <template >
     <div>
 
-    <h1>About {{ $route.params.restoran }}</h1>
+    <h1>About {{restoran}}</h1>
   
     <div class="about-section">
         <h1>Sobre nosotros</h1>
@@ -18,7 +18,8 @@
                     <h2>Desconocido</h2>
                     <p class="title">CEO & Founder</p>
                     <p>Just a ghost</p>
-                    <p>ninja@{{ $route.params.restoran }}.com</p>
+                    <p>ninja@{{ restoran }}.com</p> //
+                    <!--{{ $route.params.restoran }}-->
                     <p><button class="button">Contact</button></p>
                 </div>
             </div>
@@ -31,7 +32,7 @@
                     <h2>Groot</h2>
                     <p class="title">Art Director</p>
                     <p>I am groot ... I AM GROOT.</p>
-                    <p>Groot@{{ $route.params.restoran }}.com</p>
+                    <p>Groot@{{restoran}}.com</p>
                     <p><button class="button">Contact</button></p>
                 </div>
             </div>
@@ -42,7 +43,11 @@
 </template>
 <script>
 export default {
-    name: "AboutUs"
+    props:{
+      restoran: String
+    },
+    name: "AboutUs",
+
 }
 </script>
 <style scoped>

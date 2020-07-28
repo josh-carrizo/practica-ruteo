@@ -1,7 +1,7 @@
 <template >
     <div>
 
-        <h1>Reviews of {{ $route.params.restoran }}</h1>
+        <h1>Reviews of {{restoran}}</h1>
 
         <div class="row">
             <div class="column ">
@@ -21,7 +21,12 @@
 </template>
 <script>
 export default {
+    props:{
+      restoran: String
+    },
+
     name: "Reviews"
+
 }
 </script>
 <style scoped>

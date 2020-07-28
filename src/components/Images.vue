@@ -26,7 +26,8 @@
 </template>
 <script>
 export default {
-    name: "Images"
+    
+    name: "Images",
 }
 </script>
 <style scoped>

@@ -1,12 +1,12 @@
 <template>
   <div>
-    <router-link class="link-inicio" v-bind:to="{ path: `/` }">Home</router-link>
+    <router-link class="link-inicio" v-bind:to="{path: '/'}">Home</router-link>
        <h2 style="text-align:center"> 
-           <router-link v-bind:to="{ path: `/${$route.params.restoran}/reviews` }">Reviews</router-link>
+           <router-link v-bind:to="{ name:'reviews' , params:{restoran: restoran}}">Reviews</router-link>
            <span> | </span>
-           <router-link v-bind:to="{ path: `/${$route.params.restoran}/images` }">Images</router-link>
+           <router-link v-bind:to="{ name:'images' }">Images</router-link>
            <span> | </span>
-            <router-link v-bind:to="{ path: `/${$route.params.restoran}/` }">About Us</router-link>
+            <router-link v-bind:to="{ name:'aboutus' , params: {restoran: restoran}}">About Us</router-link>
         </h2> 
         <router-view />
 
@@ -14,8 +14,16 @@
 </template>
 
 <script>
+import M from 'materialize-css'
+
 export default {
-    name:'Restoran'
+    name:'Restoran',
+    props:{
+        restoran: String
+    },
+     mounted() {
+      M.AutoInit();
+    }
 
 }
 </script>

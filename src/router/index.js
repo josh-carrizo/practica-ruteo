@@ -18,28 +18,42 @@ export default new VueRouter({
     {
       path: '/', 
       component: PrincipalPage
+    
     },
     {
       path: '/login', 
       component: Login
+
     },
     {
       path: '/category/:restoran', 
       component: Categories,
+      name:'category',
+      props:true
     
     },
     {
       path: '/:restoran',
       component:Restoran,
+      name: 'restoran',
+      props: true,
       children:[
         {path:'',
-        component: AboutUs
+        component: AboutUs,
+        name: 'aboutus',
+        props:true
+ 
         },
         {path:'reviews',
-        component: Reviews
+        component: Reviews,
+        name: 'reviews',
+        props: true  
         },
         {path:'images',
-        component: Images
+        component: Images,
+        name:'images',
+        props: true  
+
         }
       ]
     },

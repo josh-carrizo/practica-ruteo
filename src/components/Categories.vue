@@ -1,10 +1,10 @@
 <template >
 <div>
-    <h1>Categorías de {{ $route.params.restoran }}</h1>
+    <h1>Categorías de {{ restoran }}</h1>
         <ul class="tilesWrap">
             <li>
                 <h2>01</h2>
-                <h3>First Menu of {{ $route.params.restoran }}</h3>
+                <h3>First Menu of {{ restoran }}</h3>
                 <p>
                     Lorem Ipsum is simply dummy text of the printing and typesetting   
                     industry. Lorem Ipsum has been the industry's standard dummy text ever 
@@ -14,7 +14,7 @@
             </li>
             <li>
                 <h2>02</h2>
-                <h3>Second Menu of {{ $route.params.restoran }}</h3>
+                <h3>Second Menu of {{ restoran }}</h3>
                 <p>
                     When an unknown printer took a galley of type and scrambled it to make 
                     a type specimen book. It has survived not only five centuries.
@@ -26,7 +26,9 @@
 </template>
 <script>
 export default {
-    name: "Categories"
+	name: "Categories",
+	
+    
 }
 </script>
 <style scoped>
